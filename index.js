@@ -16,8 +16,10 @@ app.get('/gaussian/:mean?/:stdev?', (req, res) => {
   const stdev = req.params.stdev || 10;
 
   const delay = Math.max(0, randgen.rnorm(parseFloat(mean), parseFloat(stdev)));
-  // TODO if accepts is json, return json
-  res.send(`Gaussian mean: ${mean} standard deviation: ${stdev} delay: ${delay}`);
+  setTimeout(function () {
+    // TODO if accepts is json, return json
+    res.send(`Gaussian mean: ${mean} standard deviation: ${stdev} delay: ${delay}`);
+  }, delay);
 });
 
 
