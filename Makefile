@@ -5,6 +5,5 @@ test:
 
 
 out:
-	gnuplot -e "set terminal png; set output \"out.png\"; set key top left; \
-	  set grid y; set ylabel \"response time (ms)\"; set xlabel \"request\"; \
-	  plot \"gaussian.tsv\" using 9 with lines lw 3;"
+	gnuplot standard.conf
+	gnuplot new.conf
