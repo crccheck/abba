@@ -1,0 +1,16 @@
+{
+  "name": "abba",
+  "version": "0.0.0",
+  "description": "Waiting",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris Chang <c@crccheck.com> (http://crccheck.com/blog)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "randgen": "^0.1.0"
+  }
+}
