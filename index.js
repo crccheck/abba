@@ -1,4 +1,4 @@
-// To see what generators are available, seE:
+// To see what generators are available, see:
 // https://github.com/robbrit/randgen/blob/master/lib/randgen.js
 const randgen = require('randgen');
 const express = require('express');
