@@ -4,8 +4,9 @@
   "description": "Waiting",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ${npm_package_main}",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix ${npm_package_main}"
   },
   "author": "Chris Chang <c@crccheck.com> (http://crccheck.com/blog)",
   "license": "ISC",
