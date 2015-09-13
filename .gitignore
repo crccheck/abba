@@ -1,0 +1,5 @@
+# user generated data files
+*.tsv
+*.png
+
+node_modules/

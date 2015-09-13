@@ -1,0 +1,17 @@
+{
+  "name": "abba",
+  "version": "0.0.0",
+  "description": "Waiting",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ${npm_package_main}",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix ${npm_package_main}"
+  },
+  "author": "Chris Chang <c@crccheck.com> (http://crccheck.com/blog)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "randgen": "^0.1.0"
+  }
+}
