@@ -11,6 +11,17 @@ app.get('/', (req, res) => {
   res.send('moo');
 });
 
+app.get('/uniform/:min?/:max?', (req, res) => {
+  const min = req.params.min || 100;
+  const max = req.params.max || min + 200;
+
+  const delay = randgen.runif(parseFloat(min), parseFloat(max));
+  setTimeout(function () {
+    // TODO if accepts is json, return json
+    res.send(`Uniform min: ${min} max: ${max} delay: ${delay}`);
+  }, delay);
+});
+
 app.get('/gaussian/:mean?/:stdev?', (req, res) => {
   const mean = req.params.mean || 100;
   const stdev = req.params.stdev || 10;
