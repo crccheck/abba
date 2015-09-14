@@ -14,11 +14,23 @@ really know how to use it? This project contains:
 Usage
 -----
 
-**Node**: TODO
+**Node**:
 
-**Docker**: TODO
+Installing requirements and then running the server:
 
-**Python**: TODO
+```
+npm install
+npm start
+```
+
+**Docker**:
+
+Running the server, exposing it on port 8888:
+
+```
+docker run -p 8888:8000 crccheck/abba
+```
+
 
 
 Addendum
