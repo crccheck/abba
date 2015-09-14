@@ -8,3 +8,9 @@ test.gaussian:
 
 test.uniform:
 	ab -n 1000 -c 10 -g uniform.tsv http://localhost:8000/uniform/100/500
+
+build:
+	docker build -t crccheck/abba .
+
+run:
+	docker run --rm --name temp -p 8888:8000 crccheck/abba
