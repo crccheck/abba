@@ -7,7 +7,7 @@ test.gaussian:
 	ab -n 2000 -c 10 -g gaussian.tsv http://localhost:8000/gaussian/1000/200
 
 test.uniform:
-	ab -n 1000 -c 10 -g uniform.tsv http://localhost:8000/uniform/100/500
+	ab -n 2000 -c 10 -g uniform.tsv http://localhost:8000/uniform/750/1250
 
 build:
 	docker build -t crccheck/abba .
