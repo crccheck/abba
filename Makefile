@@ -1,6 +1,9 @@
 help: ## Shows this help
 	@echo "$$(grep -h '#\{2\}' $(MAKEFILE_LIST) | sed 's/: #\{2\} /	/' | column -t -s '	')"
 
+install: ## Install the Pythonand Node packages you'll need
+	npm install
+	pip install -r requirements.txt
 
 # Useful ab options:
 # -n  number of requests to perform
@@ -18,4 +21,4 @@ build: ## Build Docker image
 	docker build -t crccheck/abba .
 
 run: ## Run the Docker image in the foreground
-	docker run --rm --name temp -p 8888:8000 crccheck/abba
+	docker run --rm --name temp -p 8000:8000 crccheck/abba
