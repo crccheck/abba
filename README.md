@@ -14,7 +14,7 @@ really know how to use it? This project contains:
 Usage
 -----
 
-**Node**:
+### Node
 
 Installing requirements and then running the server:
 
@@ -23,7 +23,7 @@ npm install
 npm start
 ```
 
-**Docker**:
+### Docker
 
 Running the server, exposing it on port 8888:
 
@@ -31,6 +31,9 @@ Running the server, exposing it on port 8888:
 docker run -p 8888:8000 crccheck/abba
 ```
 
+### Jupyter notebook
+
+    juypter notebook
 
 
 Addendum

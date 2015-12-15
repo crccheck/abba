@@ -17,8 +17,15 @@ test.gaussian: ## Run Gaussian distribution test
 test.uniform: ## Run uniform distribution test
 	ab -n 2000 -c 10 -g uniform.tsv http://localhost:8000/uniform/750/1250
 
+test.fantana: ## Run uniform distribution test
+	ab -n 2000 -c 10 -g fantana.tsv http://localhost:8000/fantana/
+
 build: ## Build Docker image
 	docker build -t crccheck/abba .
 
-run: ## Run the Docker image in the foreground
-	docker run --rm --name temp -p 8000:8000 crccheck/abba
+run: ## Run the Docker image in the background
+run: stop
+	docker run -d --name temp -p 8000:8000 crccheck/abba
+
+stop: ## Stop the Docker container
+	@docker rm -f temp 2>/dev/null || true
