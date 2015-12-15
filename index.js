@@ -33,6 +33,23 @@ app.get('/gaussian/:mean?/:stdev?', (req, res) => {
   }, delay);
 });
 
+app.get('/fantana/:target?/:min?/:max?', (req, res) => {
+  const target = req.params.target || 100;
+  const min = req.params.min || 200;
+  const max = req.params.max || 300;
+
+  var delay, msg;
+  if (Math.random() < 0.6) {
+    delay = target;
+    msg = 'Works every time';
+  } else {
+    delay = Math.max(0, randgen.runif(parseFloat(min), parseFloat(max)));
+    msg = "I don't know what went wrong";
+  }
+  setTimeout(function () {
+    res.send(msg);
+  }, delay);
+});
 
 const server = app.listen(8000, () => {
   console.log(`Server is online; listening on port ${server.address().port}`);
